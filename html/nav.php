@@ -47,21 +47,39 @@
                     </ul>
 <!-- Navbar Menu -->
                     <ul class="wsus__menu_item">
-                        <li><a class="active" href="/">home</a></li>
-                        <li><a href="/category.php">product category</a></li>
-                        <li><a href="/detail.php">product</a></li>
-                        <li><a href="about_us.html">about</a></li>
-                        <li><a href="privacy_policy.html">privacy policy</a></li>
+                        <li><a class="active" href="/">home</a></li>                                                                         
+                        <li>
+                            <a href="#">Product Category</a>                                                                                                           
+                                <div class="wsus__mega_menu">
+                                            <div class="row">
+                                                <?php foreach($categories as $item):?>
+                                                    <div class="col-xl-3 col-lg-3">
+                                                        <div class="wsus__mega_menu_colum">
+                                                            <h4><a href="category.php?id=<?php echo $item["id"]; ?>"><?php echo $item["name"]; ?></a> <i class="fas fa-caret-down"></i></a> </h4>
+                                                            <ul class="wsis__mega_menu_item">
+                                                                <li><a href="#">New Arrivals</a></li>
+                                                                <li><a href="#">Best Sellers</a></li>
+                                                                <li><a href="#">Trending</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>   
+                                                <?php endforeach;?>                                       
+                                            </div>
+                                </div>
+                        </li>                
+                       
+                        <li><a href="/about-us.php">about us</a></li>
+                        <li><a href="/private-proxy.php">privacy policy</a></li>
                         
                         <li><a href="/checkout.php">check out</a></li>
                         <li><a href="invoice.html">invoice</a></li>
                         <li><a href="blog.html">blog</a></li>
                        
-                        <li><a href="track_order.html">track order</a></li>
-                        <li><a href="daily_deals.html">daily deals</a></li>
+                        <!-- <li><a href="track_order.html">track order</a></li>
+                        <li><a href="daily_deals.html">daily deals</a></li> -->
                     </ul>
                     <ul class="wsus__menu_item wsus__menu_item_right">
-                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="/contact.php">contact</a></li>
                         <li><a href="dsahboard.html">my account</a></li>
                         <li><a href="/login.php">login</a></li>
                     </ul>
