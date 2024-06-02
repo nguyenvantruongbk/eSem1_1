@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-xl-2 col-7 col-md-8 col-lg-2">
                     <div class="wsus_logo_area">
-                        <a class="wsus__header_logo" href="index_.html">
+                        <a class="wsus__header_logo" href="/">
                             <img src="images/Logo.png" alt="logo" class="img-fluid w-100">
                         </a>
                     </div>
@@ -43,10 +43,10 @@
                             </div>
                         </div>
                         <ul class="wsus__icon_area">
-                            <li><a href="wishlist.html"><i class="fal fa-heart"></i><span>05</span></a></li>
-                            <li><a href="compare.html"><i class="fal fa-random"></i><span>03</span></a></li>
+                            <li><a href="wishlist.html"><i class="fal fa-heart"></i><span>0</span></a></li>
+                            <li><a href="compare.html"><i class="fal fa-random"></i><span>0</span></a></li>
                             <li><a class="wsus__cart_icon" href="#"><i
-                                        class="fal fa-shopping-bag"></i><span>04</span></a></li>
+                                        class="fal fa-shopping-bag"></i><span><?php echo isset($_SESSION["cart"])?count($_SESSION["cart"]):0; ?></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -60,56 +60,16 @@
                         <a href="#"><img src="images/tab_2.jpg" alt="product" class="img-fluid w-100"></a>
                         <a class="wsis__del_icon" href="#"><i class="fas fa-minus-circle"></i></a>
                     </div>
-                    <div class="wsus__cart_text">
+                    <!-- <div class="wsus__cart_text">
                         <a class="wsus__cart_title" href="#">apple 9.5" 7 serise tab with full view display</a>
                         <p>$140 <del>$150</del></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="wsus__cart_img">
-                        <a href="#"><img src="images/pro4.jpg" alt="product" class="img-fluid w-100"></a>
-                        <a class="wsis__del_icon" href="#"><i class="fas fa-minus-circle"></i></a>
-                    </div>
-                    <div class="wsus__cart_text">
-                        <a class="wsus__cart_title" href="#">men's fashion casual watch</a>
-                        <p>$130</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="wsus__cart_img">
-                        <a href="#"><img src="images/pro2.jpg" alt="product" class="img-fluid w-100"></a>
-                        <a class="wsis__del_icon" href="#"><i class="fas fa-minus-circle"></i></a>
-                    </div>
-                    <div class="wsus__cart_text">
-                        <a class="wsus__cart_title" href="#">men's casual shoes</a>
-                        <p>$140 <del>$150</del></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="wsus__cart_img">
-                        <a href="#"><img src="images/pro9.jpg" alt="product" class="img-fluid w-100"></a>
-                        <a class="wsis__del_icon" href="#"><i class="fas fa-minus-circle"></i></a>
-                    </div>
-                    <div class="wsus__cart_text">
-                        <a class="wsus__cart_title" href="#">men's fashion casual sholder bag</a>
-                        <p>$140</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="wsus__cart_img">
-                        <a href="#"><img src="images/tab_2.jpg" alt="product" class="img-fluid w-100"></a>
-                        <a class="wsis__del_icon" href="#"><i class="fas fa-minus-circle"></i></a>
-                    </div>
-                    <div class="wsus__cart_text">
-                        <a class="wsus__cart_title" href="#">apple 9.5" 7 serise tab with full view display</a>
-                        <p>$140 <del>$150</del></p>
-                    </div>
-                </li>
+                    </div> -->
+
             </ul>
-            <h5>sub total <span>$3540</span></h5>
+            <!-- <h5>sub total <span>$3540</span></h5> -->
             <div class="wsus__minicart_btn_area">
-                <a class="common_btn" href="cart_view.html">view cart</a>
-                <a class="common_btn" href="check_out.html">checkout</a>
+                <a class="common_btn" href="/cart.php">view cart</a>
+                <a class="common_btn" href="/checkout.php">checkout</a>
             </div>
         </div>
 
