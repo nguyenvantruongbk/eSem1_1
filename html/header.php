@@ -44,7 +44,7 @@
                         </div>
                         <ul class="wsus__icon_area">
                             <li><a href="wishlist.html"><i class="fal fa-heart"></i><span>0</span></a></li>
-                            <li><a href="compare.html"><i class="fal fa-random"></i><span>0</span></a></li>
+                            <!-- <li><a href="compare.html"><i class="fal fa-random"></i><span>0</span></a></li> -->
                             <li><a class="wsus__cart_icon" href="#"><i
                                         class="fal fa-shopping-bag"></i><span><?php echo isset($_SESSION["cart"])?count($_SESSION["cart"]):0; ?></span></a></li>
                         </ul>

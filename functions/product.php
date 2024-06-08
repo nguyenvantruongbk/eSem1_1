@@ -25,7 +25,16 @@ require_once("database.php");
 // }
 //
 function newest_products(){
-    $sql = "select * from products order by id desc limit 4";
+    $sql = "select * from products order by id desc limit 8";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+function related_products($categoryId){
+    $sql = "SELECT * from products where category_id = $categoryId order by id desc limit 8";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){
@@ -34,7 +43,7 @@ function newest_products(){
     return $list;
 }
 function best_sellers(){
-    $sql = "select * from products order by qty desc limit 4";
+    $sql = "select * from products order by qty desc limit 8";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){
@@ -44,7 +53,7 @@ function best_sellers(){
 }
 
 function hot_items(){
-    $sql = "select * from products order by price desc limit 4";
+    $sql = "select * from products order by price desc limit 8";
     $result = query($sql);
     $list = [];
     while($row = $result->fetch_assoc()){
