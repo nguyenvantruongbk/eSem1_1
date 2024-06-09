@@ -25,25 +25,31 @@
                 </div>
                 <div class="col-xl-2 col-sm-5 col-md-4 col-lg-2">
                     <div class="wsus__footer_content">
-                        <h5>Led Ligh Store</h5>
+                        <h5>Products</h5>
                         <ul class="wsus__footer_menu">
-                            <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Category</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Career</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Order History</a></li>
+                            <li><a href="/category.php?id=10"><i class="fas fa-caret-right"></i> LED Spotlights</a></li>
+                            <li><a href="/category.php?id=11"><i class="fas fa-caret-right"></i> LED Bulbs</a></li>
+                            <li><a href="/category.php?id=14"><i class="fas fa-caret-right"></i>LED Strip Lights</a></li>
+                            <li><a href="/category.php?id=15"><i class="fas fa-caret-right"></i>Seasonal Lighting</a></li>
+                           
+                            <li><a href="/category.php?id=16"><i class="fas fa-caret-right"></i> Fittings & Fixtures</a></li>
+                            <li><a href="/category.php?id=17"><i class="fas fa-caret-right"></i> Outdoor</a></li>
+
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2 col-sm-5 col-md-4 col-lg-2">
                     <div class="wsus__footer_content">
-                        <h5>Company</h5>
+                        <h5>Customer Help</h5>
                         <ul class="wsus__footer_menu">
-                        <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Category</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Career</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Order History</a></li>
+                        <li><a href="/contact.php"><i class="fas fa-caret-right"></i> Contact Us</a></li>
+                            <li><a href="/about-us.php"><i class="fas fa-caret-right"></i> About us</a></li>
+                            <li><a href="/terms.php"><i class="fas fa-caret-right"></i> Terms & Conditions</a></li>
+                            <li><a href="/private-proxy.php"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
+                            <li><a href="#"><i class="fas fa-caret-right"></i> Return Policy</a></li>
+                            
+                            <li><a href="#"><i class="fas fa-caret-right"></i> Warranty Information</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -53,12 +59,12 @@
                         <p>Get all the latest information on Events, Sales and Offers.
                             Get all the latest information on Events.</p>
                         <form>
-                            <input type="text" placeholder="Search...">
-                            <button type="submit" class="common_btn">subscribe</button>
+                            <input type="text" placeholder="Email address">
+                            <button type="submit" class="common_btn">Subscribe</button>
                         </form>
                         <div class="footer_payment">
                             <p>We're using safe payment for :</p>
-                            <img src="images/credit2.png" alt="card" class="img-fluid">
+                            <img src="images/PaymentCard.JPG" alt="card" class="img-fluid">
                         </div>
                     </div>
                 </div>

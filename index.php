@@ -1,9 +1,12 @@
 <?php
    require_once("functions/product.php");
-   //require("functions/product.php");
+   
     $newest_products = newest_products();
     $best_sellers = best_sellers();
     $hot_items = hot_items();
+    $news = recent_blogs();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,10 +48,9 @@
                                     <img src="<?php echo $item["thumbnail"] ?>" alt="product" class="img-fluid w-100 img_2" />
                                 </a>
                                 <ul class="wsus__single_pro_icon">
-                                    <!-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                class="far fa-eye"></i></a></li> -->
+                                    
                                     <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <!-- <li><a href="#"><i class="far fa-random"></i></a> -->
+                                    
                                 </ul>
                                 <div class="wsus__product_details">
                                     <a class="wsus__category" href="#"><?php echo $item["category"] ?> </a>
@@ -91,10 +93,9 @@
                                     <img src="<?php echo $item["thumbnail"] ?>" alt="product" class="img-fluid w-100 img_2" />
                                 </a>
                                 <ul class="wsus__single_pro_icon">
-                                    <!-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                class="far fa-eye"></i></a></li> -->
+                                    
                                     <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <!-- <li><a href="#"><i class="far fa-random"></i></a> -->
+                                    
                                 </ul>
                                 <div class="wsus__product_details">
                                     <a class="wsus__category" href="#"><?php echo $item["category"] ?> </a>
@@ -142,10 +143,9 @@
                                     <img src="<?php echo $item["thumbnail"] ?>" alt="product" class="img-fluid w-100 img_2" />
                                 </a>
                                 <ul class="wsus__single_pro_icon">
-                                    <!-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                class="far fa-eye"></i></a></li> -->
+                                    
                                     <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <!-- <li><a href="#"><i class="far fa-random"></i></a> -->
+                                   
                                 </ul>
                                 <div class="wsus__product_details">
                                     <a class="wsus__category" href="#"><?php echo $item["category"] ?> </a>
@@ -168,14 +168,13 @@
                     <?php endforeach;?> 
                 <!-- </div> -->
                 <!-- <div></div> -->
-                <!-- <div></div> -->
-                <!-- <div></div> -->
-                <!-- <div></div> -->
-                <!-- <div></div> -->
+              
                 
 
 
             </div>
+            <?php include_once("html/serviceBanner.php");?>
+            <?php include_once("html/blog_homePage.php");?>
         </div>
     </main>
     <?php include_once("html/footer.php");?>

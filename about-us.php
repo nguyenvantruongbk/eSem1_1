@@ -31,14 +31,7 @@
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium et
-                                            delectus optio voluptate itaque vero dolorem autem, totam minima quo
-                                            maiores facilis voluptas quis quisquam fugiat culpa qui dolore aliquid
-                                            accusantium fugit tempora quidem quaerat perferendis. Quae voluptas
-                                            vitae veritatis adipisci natus, aliquid doloribus veniam excepturi quasi
-                                            id reiciendis delectus fugit illo. Laboriosam blanditiis iusto itaque
-                                            possimus, aut cum quis maiores facilis voluptas quis quisquam fugiat
-                                            culpa qui dolore aliquid accusantium fugit tempora quidem.</p>
+                                        <p>We pride ourselves on delivering exceptional customer service. Our goal is to provide a seamless and enjoyable shopping experience, ensuring that every customer finds the perfect lighting solution for their needs .</p>
                                     </div>
                                 </div>
                             </div>
@@ -52,10 +45,7 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quae
-                                            repellendus quidem. Laboriosam perspiciatis architecto numquam?
-                                            Eligendi, velit! Sequi magni fugiat dicta praesentium ea commodi
-                                            inventore eveniet possimus facilis assumenda.</p>
+                                        <p>We understand that choosing the right lighting can be a daunting task. That's why we offer a comprehensive online consultation service, designed to provide you with expert guidance and personalized solutions from the comfort of your home or office.</p>
                                     </div>
                                 </div>
                             </div>
@@ -70,10 +60,7 @@
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quae
-                                            repellendus quidem. Laboriosam perspiciatis architecto numquam?
-                                            Eligendi, velit! Sequi magni fugiat dicta praesentium ea commodi
-                                            inventore eveniet possimus facilis assumenda.</p>
+                                        <p>Our sales management strategy is designed to ensure that every customer interaction is positive, productive, and leads to a successful sale. We focus on delivering value, building relationships, and creating a seamless buying experience from start to finish .</p>
                                     </div>
                                 </div>
                             </div>
@@ -179,52 +166,47 @@
             <div class="row team_slider">
                 <div class="col-xl-4">
                     <div class="wsus__team_det_rev_single">
-                        <img src="images/team_3.jpg" alt="clients" class="img-fluid">
+                        <img src="images/c1a.JPG" alt="clients" class="img-fluid">
                         <h3>jinia sing</h3>
-                        <h6>digital marketer</h6>
+                        <h6>Home Renovator</h6>
                         <span><i class="fal fa-quote-left"></i></span>
-                        <p>Lorem ipsum, dolor sit amet consectetur elit. Recusandae aspernatur fugit ex unde eligendi
-                            minima voluptatum numquam aliquam doloremque quod eos aperiam.</p>
+                        <p>"I recently purchased LED bulbs, and I couldn't be happier with the quality. The brightness is perfect, and they have significantly reduced my energy bills. Highly recommend!".</p>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="wsus__team_det_rev_single">
-                        <img src="images/team_2.jpg" alt="clients" class="img-fluid">
+                        <img src="images/c1b.JPG" alt="clients" class="img-fluid">
                         <h3>arun chandra</h3>
-                        <h6>digital marketer</h6>
+                        <h6>Homeowner</h6>
                         <span><i class="fal fa-quote-left"></i></span>
-                        <p>Lorem ipsum, dolor sit amet consectetur elit. Recusandae aspernatur fugit ex unde eligendi
-                            minima voluptatum numquam aliquam doloremque quod eos aperiam.</p>
+                        <p>"The customer service at your store is top-notch. I had several questions about which LED lights would be best for my office, and their team provided detailed, helpful answers. The online consultation was particularly beneficial. Thank you!"</p>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="wsus__team_det_rev_single">
-                        <img src="images/team_4.jpg" alt="clients" class="img-fluid">
+                        <img src="images/c1c.JPG" alt="clients" class="img-fluid">
                         <h3>smith jhon</h3>
-                        <h6>digital marketer</h6>
+                        <h6>Office Manager</h6>
                         <span><i class="fal fa-quote-left"></i></span>
-                        <p>Lorem ipsum, dolor sit amet consectetur elit. Recusandae aspernatur fugit ex unde eligendi
-                            minima voluptatum numquam aliquam doloremque quod eos aperiam.</p>
+                        <p>"Shopping online  was a breeze. The website is user-friendly, and I found exactly what I needed in no time. My order arrived quickly and was well-packaged. I'll definitely be coming back for more!".</p>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="wsus__team_det_rev_single">
-                        <img src="images/team_3.jpg" alt="clients" class="img-fluid">
-                        <h3>smith jhon</h3>
-                        <h6>digital marketer</h6>
+                        <img src="images/c1d.JPG" alt="clients" class="img-fluid">
+                        <h3>Sara K.</h3>
+                        <h6>Interior Designer</h6>
                         <span><i class="fal fa-quote-left"></i></span>
-                        <p>Lorem ipsum, dolor sit amet consectetur elit. Recusandae aspernatur fugit ex unde eligendi
-                            minima voluptatum numquam aliquam doloremque quod eos aperiam.</p>
+                        <p>"I booked an online consultation, and it was fantastic! The consultant helped me choose the right LED lights for my living room and kitchen. The personalized advice made a huge difference, and the lighting looks amazing. Great service!".</p>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="wsus__team_det_rev_single">
-                        <img src="images/team_4.jpg" alt="clients" class="img-fluid">
-                        <h3>smith jhon</h3>
-                        <h6>digital marketer</h6>
+                        <img src="images/c1e.JPG" alt="clients" class="img-fluid">
+                        <h3>Alex R</h3>
+                        <h6>Home Renovator</h6>
                         <span><i class="fal fa-quote-left"></i></span>
-                        <p>Lorem ipsum, dolor sit amet consectetur elit. Recusandae aspernatur fugit ex unde eligendi
-                            minima voluptatum numquam aliquam doloremque quod eos aperiam.</p>
+                        <p>"After purchasing my LED lights, I had a few issues with installation. The support team at your store was incredibly patient and walked me through the process step by step. Now everything is working perfectly. Couldn't ask for better service!"</p>
                     </div>
                 </div>
             </div>
@@ -238,7 +220,7 @@
                     <div class="col-xl-3 col-sm-6 col-lg-3">
                         <div class="wsus__team_single">
                             <div class="wsus__team_img">
-                                <img src="images/team_1.jpg" alt="team" class="img-fluid w-100">
+                                <img src="images/c1f.JPG" alt="team" class="img-fluid w-100">
                                 <a class="wsus__team_single_overlay" href="#"></a>
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -248,7 +230,7 @@
                                 </ul>
                             </div>
                             <div class="wsus__team_text">
-                                <h5>allu arjun</h5>
+                                <h5>Truong Nguyen</h5>
                                 <p>founder & ceo</p>
                             </div>
                         </div>
@@ -256,7 +238,7 @@
                     <div class="col-xl-3 col-sm-6 col-lg-3">
                         <div class="wsus__team_single">
                             <div class="wsus__team_img">
-                                <img src="images/team_2.jpg" alt="team" class="img-fluid w-100">
+                                <img src="images/c1g.JPG" alt="team" class="img-fluid w-100">
                                 <a class="wsus__team_single_overlay" href="#"></a>
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -266,7 +248,7 @@
                                 </ul>
                             </div>
                             <div class="wsus__team_text">
-                                <h5>allu arjun</h5>
+                                <h5>Hieu Nguyen</h5>
                                 <p>Marketing</p>
                             </div>
                         </div>
@@ -274,7 +256,7 @@
                     <div class="col-xl-3 col-sm-6 col-lg-3">
                         <div class="wsus__team_single">
                             <div class="wsus__team_img">
-                                <img src="images/team_3.jpg" alt="team" class="img-fluid w-100">
+                                <img src="images/c1h.JPG" alt="team" class="img-fluid w-100">
                                 <a class="wsus__team_single_overlay" href="#"></a>
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -284,7 +266,7 @@
                                 </ul>
                             </div>
                             <div class="wsus__team_text">
-                                <h5>allu arjun</h5>
+                                <h5>Son Tran</h5>
                                 <p>designer</p>
                             </div>
                         </div>
@@ -292,7 +274,7 @@
                     <div class="col-xl-3 col-sm-6 col-lg-3">
                         <div class="wsus__team_single">
                             <div class="wsus__team_img">
-                                <img src="images/team_2.jpg" alt="team" class="img-fluid w-100">
+                                <img src="images/c1i.JPG" alt="team" class="img-fluid w-100">
                                 <a class="wsus__team_single_overlay" href="#"></a>
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -302,7 +284,7 @@
                                 </ul>
                             </div>
                             <div class="wsus__team_text">
-                                <h5>allu arjun</h5>
+                                <h5>Lam Lam</h5>
                                 <p>developer</p>
                             </div>
                         </div>

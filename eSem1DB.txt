@@ -1,0 +1,78 @@
+MySQL
+CREATE TABLE categories( 
+    	id INT AUTO_INCREMENT PRIMARY KEY, 
+	name varchar(255) NOT null
+	);
+
+CREATE TABLE orders( 
+	id int AUTO_INCREMENT PRIMARY KEY, 
+	customer_name varchar(255), 
+	tel int(11), 
+	address text, 
+	grand_total decimal(14,2), 
+	status varchar(255), 
+	shipping_method varchar(255), 
+	payment_method varchar(255)
+	); 
+
+
+CREATE TABLE products( 
+	id int PRIMARY KEY AUTO_INCREMENT, 
+	name varchar(255), 
+	thumbnail varchar(255), 
+	price decimal(14,2) , 
+	description text, 
+	qty int, 
+	category_id INT, 
+	FOREIGN KEY (categories_id) REFERENCES categories(id) 
+	);
+
+CREATE TABLE order_products ( 
+	order_id int, 
+	product_id int, 
+	bought_qty int, 
+	price DECIMAL(14, 2), 
+	FOREIGN KEY (order_id) REFERENCES orders(id), 
+	FOREIGN KEY (product_id) REFERENCES products(id) 
+	);
+
+CREATE TABLE users(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    	full_name varchar(100) not null,
+    	email varchar(100) not null UNIQUE,
+    	password varchar(255)
+	);
+---
+Blog
+CREATE TABLE blog_categories( 
+    	id INT AUTO_INCREMENT PRIMARY KEY, 
+	name varchar(255) NOT null
+	);
+CREATE TABLE blogs( 
+	id int PRIMARY KEY AUTO_INCREMENT, 
+	title varchar(255), 
+	thumbnail varchar(255), 
+	title1 text , 
+	description11 text,
+	image1 varchar(255),
+ 	description12 text,
+	title2 text , 
+	description21 text,
+	image2 varchar(255),
+ 	description22 text,
+	title3 text , 
+	description31 text,
+	image3 varchar(255),
+ 	description32 text,
+    blog_categories_id INT,
+	FOREIGN KEY (blog_categories_id) REFERENCES blog_categories(id) 
+	);
+
+Nhap lieu:
+https://dummyjson.com/products?limit=12
+
+
+
+
+
+

@@ -81,10 +81,7 @@
                    <div class="col-xl-5 col-md-7 col-lg-7">
                         <div class="wsus__pro_details_text">
                             
-                            <!-- <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-                                neque
-                                sint obcaecati asperiores dolor cumque. ad voluptate dolores reprehenderit hic adipisci
-                                Similique eaque illum.</p> -->
+                            
                         
                                 <form action="/add_to_cart.php" method="post" class="select_number">
 
@@ -108,30 +105,7 @@
                                     <?php if($product["qty"] == 0):?>
                                         <p class="text-danger">Out of stock</p>
                                     <?php endif;?>
-                                    <!-- <div class="wsus__selectbox">
-                                        <div class="row">
-                                            <div class="col-xl-6 col-sm-6">
-                                                <h5 class="mb-2">select:</h5>
-                                                <select class="select_2" name="state">
-                                                    <option>default select</option>
-                                                    <option>select 1</option>
-                                                    <option>select 2</option>
-                                                    <option>select 3</option>
-                                                    <option>select 4</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xl-6 col-sm-6">
-                                                <h5 class="mb-2">select:</h5>
-                                                <select class="select_2" name="state">
-                                                    <option>default select</option>
-                                                    <option>select 1</option>
-                                                    <option>select 2</option>
-                                                    <option>select 3</option>
-                                                    <option>select 4</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    
 
                                     <ul class="wsus__button_area">
 
@@ -628,56 +602,22 @@
                                 </div>
                                 <!-- <div></div> -->
 
-
-
-
-
-                                <!-- <div></div> -->
-                                <!-- <div></div> -->
-                                <!-- <div></div> -->
-                                <!-- <div></div> -->
-                                <!-- <div></div> -->
-                                <!-- <div></div> -->
                             </div>
                             <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
-                            <!-- <div></div> -->
+                            
                         </div>
 
                     </div>
                     
                 </div>
              
-             <!-- <div></div> -->
-             <!-- <div></div> -->
-
-             <!-- <div></div> -->
-             <!-- <div></div> -->
-
-
-             <!-- <div></div> -->
-             <!-- <div></div> -->
-                
-
-
+             <!-- <div></div> -->               
             </div>
         </div>  
 
     <!-- <div></div> -->
 
-    
-    <!-- <div></div> -->
-    <!-- <div></div> -->
 
-
-    <!-- <div></div> -->
 <!--============================
     RELATED PRODUCT START
 ==============================-->
@@ -707,10 +647,9 @@
                                     <img src="<?php echo $item["thumbnail"] ?>" alt="product" class="img-fluid w-100 img_2" />
                                 </a>
                                 <ul class="wsus__single_pro_icon">
-                                    <!-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                class="far fa-eye"></i></a></li> -->
+                                    
                                     <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <!-- <li><a href="#"><i class="far fa-random"></i></a> -->
+                                   
                                 </ul>
                                 <div class="wsus__product_details">
                                     <a class="wsus__category" href="#"><?php echo $item["category"] ?> </a>
@@ -735,8 +674,7 @@
 
 <!-- <div></div> -->
 <!-- <div></div> -->
-<!-- <div></div> -->
-<!-- <div></div> -->
+
 
 
             </div>

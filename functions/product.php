@@ -1,29 +1,6 @@
 <?php 
 require_once("database.php");
-// function connect(){
-//     $host = "127.0.0.1";
-//     $user = "root";
-//     $pwd = "root";
-//     $db = "t2311e_demo";
-//     $conn = new mysqli($host,$user,$pwd,$db);
-//     if($conn->connect_error)
-//         die("Connect refused!");
-//     return $conn;
-// }
 
-// function query($sql){
-//     $conn = connect();
-//     return $conn->query($sql);
-// }
-
-// function insert_get_id($sql){
-//     $conn = connect();
-//     if($conn->query($sql) == true){
-//         return $conn->insert_id;
-//     }
-//     return 0;
-// }
-//
 function newest_products(){
     $sql = "select * from products order by id desc limit 8";
     $result = query($sql);
@@ -61,6 +38,15 @@ function hot_items(){
     }
     return $list;
 }
+function recent_blogs(){
+    $sql = "SELECT * from blogs order by date desc limit 8";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
 function search_items($search){
     
     $sql = "SELECT * FROM products WHERE name LIKE '%$search%'";
@@ -72,6 +58,7 @@ function search_items($search){
     return $list;
 
 }
+
 //   //2. query SQL
 //      // 2.1. Lấy tham số
 //      $limit = isset($_GET["limit"]) && $_GET["limit"]!= "" ?$_GET["limit"]:20;
@@ -93,6 +80,8 @@ function categories_all(){
     }
     return $list;
 }
+
+
 
 function category_detail($category_id){
     $sql_cat = "select * from categories where id = $category_id";
@@ -119,4 +108,47 @@ function product_detail($product_id)  {
         return $result->fetch_assoc();// 1 product
     }
     return null;
+}
+function blog_detail($blog_id)  {
+    $sql = "select * from blogs where id = $blog_id";
+    $result = query($sql);
+    if($result->num_rows > 0){
+        return $result->fetch_assoc();// 1 product
+    }
+    return null;
+}
+function blog_category_detail($blog_category_id){
+    $sql_cat = "SELECT * from blog_categories where id = $blog_category_id";
+    $result = query($sql_cat);
+    if($result->num_rows > 0){
+        $blog_category = $result->fetch_assoc();
+        $sql_blog = "SELECT * from blogs where blog_categories_id = $blog_category_id";
+        $result = query($sql_blog);
+        $list = [];
+        while($row = $result->fetch_assoc()){
+            $list[] = $row;
+        }
+        $blog_category["blogs"] = $list;
+        return $blog_category;
+    }
+    return null;
+    
+}
+function blog_categories_all(){
+    $sql = "SELECT * from blog_categories";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+function related_blogs($blogId){
+    $sql = "SELECT * from blogs where blog_categories_id = $blogId order by id desc limit 8";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
 }
