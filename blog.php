@@ -1,6 +1,6 @@
 
 <?php
-   require_once("functions/product.php");
+   require_once("functions/m_product.php");
    //require("functions/product.php");
     $news = recent_blogs();
     $blogcategories = blog_categories_all();
@@ -125,5 +125,6 @@
 ===========================-->
 </main>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

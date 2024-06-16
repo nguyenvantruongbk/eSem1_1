@@ -1,5 +1,5 @@
 <?php
-    require_once("functions/product.php");
+    require_once("functions/m_product.php");
     $search = $_GET["search"];
     $search = search_items($search);
 ?>
@@ -58,5 +58,6 @@
     
     </main>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

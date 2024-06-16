@@ -1,5 +1,5 @@
 <?php
-    require_once("functions/product.php");
+    require_once("functions/m_product.php");
     $id = $_GET["id"];
     // tim san pham trong db
     $product = product_detail($id);
@@ -83,7 +83,8 @@
                             
                             
                         
-                                <form action="/add_to_cart.php" method="post" class="select_number">
+                             
+                                <form action="/c_add_to_cart.php" method="post" class="select_number">
 
                                     <a class="title" href="#"><?php echo $product["name"];?></a>
                                     <p class="wsus__stock_area"><span class="in_stock">in stock</span> (<?php echo $product["qty"];?> items)</p>
@@ -100,7 +101,7 @@
                                          <h5>quantity :</h5>
                                     </div>
                                     <input type="hidden" name="product_id" value="<?php echo $product["id"] ?>"/>
-                                    <input value="1" type="number" name="bought_qty"/>
+                                    <input value="1" min="0" max="40" type="number" name="bought_qty"/>
                                     
                                     <?php if($product["qty"] == 0):?>
                                         <p class="text-danger">Out of stock</p>
@@ -689,5 +690,6 @@
     
     </main>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

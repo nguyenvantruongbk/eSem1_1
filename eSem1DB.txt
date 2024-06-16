@@ -68,6 +68,14 @@ CREATE TABLE blogs(
 	FOREIGN KEY (blog_categories_id) REFERENCES blog_categories(id) 
 	);
 
+	CREATE TABLE contacts(
+	    id int PRIMARY KEY AUTO_INCREMENT,
+    	name varchar(100) not null,
+    	email varchar(100) not null,
+    	tel varchar(100) not null,
+    	mes text not null   
+	);
+
 Nhap lieu:
 https://dummyjson.com/products?limit=12
 

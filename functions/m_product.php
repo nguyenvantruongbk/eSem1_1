@@ -58,7 +58,15 @@ function search_items($search){
     return $list;
 
 }
-
+function order_list(){
+    $sql = "SELECT * from orders order by id desc ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
 //   //2. query SQL
 //      // 2.1. Lấy tham số
 //      $limit = isset($_GET["limit"]) && $_GET["limit"]!= "" ?$_GET["limit"]:20;
@@ -132,6 +140,42 @@ function blog_category_detail($blog_category_id){
         return $blog_category;
     }
     return null;
+    
+}
+function order_detail($order_id){
+    $sql_order = "SELECT * from orders where id = $order_id";
+    $result = query($sql_order);
+    if($result->num_rows > 0){
+        $order_detail = $result->fetch_assoc();//order_detail["id","customer_name","tel",...,"payment_method"]
+        //
+        
+        $sql_order_product = "SELECT * from order_products where order_id = $order_id";
+        $result = query($sql_order_product);
+        $list = [];
+        while($row = $result->fetch_assoc()){
+            $list[] = $row;
+        }
+        $order_detail["order_product"] = $list;////order_detail["id","customer_name","tel",...,"payment_method",     -------"product"]    order_detail["product"]["product_id","bought_qty","price"]
+       // $product_ids = implode(",",$order_detail["order_product"]["product_id"]);
+       $product_ids = [];
+        foreach($list as $item){
+            $product_ids[] = $item["product_id"];
+        }
+        $product_ids = implode(",",$product_ids); // biến array thành string
+        $sql = "select * from products where id in ($product_ids)";
+        $result = query($sql);
+        $list = [];
+        while($row = $result->fetch_assoc()){
+            $list[] = $row;
+        }
+
+        $order_detail["product"] = $list; 
+
+        return $order_detail;//$order_detail["product"]; $order_detail["order_product"] order_detail["id","customer_name","tel",...,"payment_method"]
+    }
+    return null;
+    //order_detail(19);
+    //$oderdetail["order_product"]["order_id"]
     
 }
 function blog_categories_all(){

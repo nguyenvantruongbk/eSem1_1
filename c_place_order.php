@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once("functions/cart.php");
-require_once("functions/checkout.php");
-require_once("functions/paypal.php");
+require_once("functions/m_cart.php");
+require_once("functions/m_checkout.php");
+require_once("functions/m_paypal.php");
 
 $customer_name = $_POST['customer_name'];
 $tel = $_POST["tel"];

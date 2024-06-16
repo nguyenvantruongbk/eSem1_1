@@ -1,5 +1,5 @@
 <?php
-require_once("functions/checkout.php");
+require_once("functions/m_checkout.php");
 $order_id = $_GET["order_id"];
 updateStatusUnPaid($order_id);
 // redirect to thank you

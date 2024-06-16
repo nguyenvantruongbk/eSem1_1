@@ -1,5 +1,5 @@
 <?php session_start();
-    require_once("functions/cart.php");
+    require_once("functions/m_cart.php");
     $cart = isset($_SESSION["cart"])?$_SESSION["cart"]:[];
     $products = get_cart();
 ?>
@@ -17,7 +17,7 @@
     <main class="main">
         <div class="container">
             <h1>Checkout</h1>
-            <form action="/place_order.php" method="post">
+            <form action="/c_place_order.php" method="post">
             <div class="row">
                 <div class="col-8">
                     <div class="mb-3">
@@ -82,5 +82,6 @@
         </div>
     </main>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

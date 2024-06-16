@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("functions/user.php");
+require_once("functions/m_user.php");
 
 $email = $_POST["email"];
 $password = $_POST["password"];

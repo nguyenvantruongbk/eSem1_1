@@ -1,5 +1,5 @@
 <?php 
-require_once("functions/user.php");
+require_once("functions/m_user.php");
 $full_name = $_POST["full_name"];
 $email = $_POST["email"];
 $password = $_POST["password"];

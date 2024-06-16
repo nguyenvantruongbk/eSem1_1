@@ -1,5 +1,5 @@
 <?php
-   require_once("functions/product.php");
+   require_once("functions/m_product.php");
    
     $newest_products = newest_products();
     $best_sellers = best_sellers();
@@ -178,5 +178,6 @@
         </div>
     </main>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

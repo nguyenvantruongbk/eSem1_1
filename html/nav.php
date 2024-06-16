@@ -1,6 +1,6 @@
 
 <?php
-    require_once("functions/product.php");
+    require_once("functions/m_product.php");
     $categories = categories_all();
 ?>
    
@@ -51,8 +51,27 @@
                     </ul>
                     <ul class="wsus__menu_item wsus__menu_item_right">                                             
                         <?php if(isset($_SESSION["auth"]) && $_SESSION["auth"] != null):?>
-                            <li> <a  href="#"><?php echo $_SESSION["auth"]["full_name"];?></a></li>
-                            <li><a  href="/logout_user.php">Logout</a></li>                      
+                          
+
+                                <!-- <div></div> -->
+                                <li class="wsus__relative_li"><a href="#"><?php echo $_SESSION["auth"]["full_name"];?> <i class="fas fa-caret-down"></i></a>
+                                
+                                
+                                    
+                                    <ul class="wsus__menu_droapdown">
+                                         <?php if($_SESSION["auth"]["full_name"]=="Web-admin"):?>
+                                    
+                                        <li><a href="/Admin_dash_board.php">Admin Dashboard</a></li>
+                                        <!-- <li><a href="faqs.html">faq</a></li> -->
+                                        <?php else:?><li><a href="/cart.php">My Card</a></li>
+                                            <?php endif;?> 
+                                    </ul>
+                                
+                                <!-- <div></div> -->
+                                <!-- <div></div> -->
+
+
+                            <li><a  href="/c_logout_user.php">Logout</a></li>                      
                         <?php else:?>                        
                         <li><a  href="/login.php"> Login/Register</a></li>
                         <?php endif;?>      

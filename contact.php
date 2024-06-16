@@ -24,7 +24,7 @@
                                     <i class="fal fa-envelope"></i>
                                     <h5>mail address</h5>
                                     <a href="mailto:example@gmail.com">example@gmail.com</a>
-                                    <span><i class="fal fa-envelope"></i></span>
+                                    <!-- <span><i class="fal fa-envelope"></i></span> -->
                                 </div>
                             </div>
                             <div class="col-xl-12">
@@ -32,7 +32,7 @@
                                     <i class="far fa-phone-alt"></i>
                                     <h5>phone number</h5>
                                     <a href="macallto:+69522145000001">+69522145000001</a>
-                                    <span><i class="far fa-phone-alt"></i></span>
+                                    <!-- <span><i class="far fa-phone-alt"></i></span> -->
                                 </div>
                             </div>
                             <div class="col-xl-12">
@@ -40,7 +40,7 @@
                                     <i class="fal fa-map-marker-alt"></i>
                                     <h5>contact address</h5>
                                     <a href="mailto:example@gmail.com">example@gmail.com</a>
-                                    <span><i class="fal fa-map-marker-alt"></i></span>
+                                    <!-- <span><i class="fal fa-map-marker-alt"></i></span> -->
                                 </div>
                             </div>
                         </div>
@@ -48,31 +48,31 @@
                     <div class="col-xl-8">
                         <div class="wsus__contact_question">
                             <h5>Send Us a Message</h5>
-                            <form>
+                            <form method="POST" action="/c_create_message.php">
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="wsus__con_form_single">
-                                            <input type="text" placeholder="Your Name">
+                                            <input type="text" placeholder="Your Name" name="name" value="">
                                         </div>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="wsus__con_form_single">
-                                            <input type="email" placeholder="Email">
+                                            <input type="email" placeholder="Email" name="email" value="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="wsus__con_form_single">
-                                            <input type="text" placeholder="Phone">
+                                            <input type="text" placeholder="Phone" name="tel" value="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="wsus__con_form_single">
-                                            <input type="text" placeholder="Subject">
+                                            <input type="text" placeholder="Subject" name="subject" value="">
                                         </div>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="wsus__con_form_single">
-                                            <textarea cols="3" rows="5" placeholder="Message"></textarea>
+                                            <textarea cols="3" rows="5" placeholder="message" name="mes" value=""></textarea>
                                         </div>
                                         <button type="submit" class="common_btn">send now</button>
                                     </div>
@@ -95,4 +95,5 @@
 
 
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>

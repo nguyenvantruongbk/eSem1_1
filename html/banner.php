@@ -2,7 +2,7 @@
         BANNER PART 2 START
     ==============================-->
     <section id="wsus__banner">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="wsus__banner_content">

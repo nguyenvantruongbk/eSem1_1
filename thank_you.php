@@ -2,7 +2,7 @@
 // require_once("functions/cart.php");
 // require_once("functions/checkout.php");
 // updateStatusPaid($order_id);
-echo "<h1>Thank You</h1>";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,10 @@ echo "<h1>Thank You</h1>";
 
 <?php include_once("html/header.php");?>
     <?php include_once("html/nav.php");?>
-    <h1>Thank you for your purchase</h1>
+    <div class="container">
+    <img src="images/tk.JPG" class="img-fluid" alt="Thank You" style="width: 100%; height: auto">    
+    
+    </div>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>

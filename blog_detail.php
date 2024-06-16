@@ -1,6 +1,6 @@
 
 <?php
-   require_once("functions/product.php");
+   require_once("functions/m_product.php");
    //require("functions/product.php");   
     $blog_id = $_GET["id"];
   
@@ -218,5 +218,6 @@
 ===========================-->
 </main>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

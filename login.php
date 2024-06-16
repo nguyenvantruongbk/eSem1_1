@@ -65,7 +65,7 @@
                             <div class="tab-pane fade show active" id="pills-homes" role="tabpanel"
                                  aria-labelledby="pills-home-tab2">
                                 <div class="wsus__login">
-                                    <form method="POST" action="/login_user.php">
+                                    <form method="POST" action="/c_login_user.php">
                                         <!-- <input type="hidden" name="_token" value="6jJAp9m2GTpPGUckMi5nQ8MOAR95w0jdvkS4wJfp" autocomplete="off"> -->
                                         <!-- Email Address -->
                                         <div class="wsus__login_input">
@@ -99,7 +99,7 @@
                             <div class="tab-pane fade" id="pills-profiles" role="tabpanel"
                                  aria-labelledby="pills-profile-tab2">
                                 <div class="wsus__login">
-                                    <form method="POST" action="/create_user.php">
+                                    <form method="POST" action="/c_create_user.php">
                                         <!-- <input type="hidden" name="_token" value="6jJAp9m2GTpPGUckMi5nQ8MOAR95w0jdvkS4wJfp" autocomplete="off"> -->
                                         <!-- Name -->
                                         <div class="wsus__login_input">
@@ -148,5 +148,6 @@
         </div>
     </section>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

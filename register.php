@@ -38,5 +38,6 @@
         </div>
     </section>
     <?php include_once("html/footer.php");?>
+    <?php include_once("html/js.php");?> 
 </body>
 </html>

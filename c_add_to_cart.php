@@ -9,9 +9,9 @@ $bought_qty = $_POST["bought_qty"];
 // nếu có rồi thì tăng số lượng mua
 // còn chưa có thì thêm vào 
 if(isset($cart[$id])){
-    $cart[$id] = $cart[$id] + $bought_qty;
+    $cart[$id] = isset($_POST["total_bought_qty"])? $_POST["total_bought_qty"]:$cart[$id] + $bought_qty;
 }else{
-    $cart[$id]= $bought_qty;
+    $cart[$id]= isset($_POST["total_bought_qty"])?$_POST["total_bought_qty"]:$bought_qty;
 }
 
 // gán giá trị lại về session

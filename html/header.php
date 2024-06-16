@@ -1,8 +1,9 @@
 <?php
-    require_once("functions/product.php");
+    require_once("functions/m_product.php");
     $categories = categories_all();
-?>
     
+?>
+
     <!--============================
         HEADER START
     ==============================-->
