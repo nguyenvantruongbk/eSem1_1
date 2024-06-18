@@ -51,6 +51,7 @@ $oderdetail = order_detail($id);
           </div>
       </div>
   </div>
+
     <!-- main --> 
     <div class="row">
                 <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
@@ -107,6 +108,9 @@ $oderdetail = order_detail($id);
                                                 <th class="total">
                                                     total
                                                 </th>
+                                                <th class="total">
+                                                    order status
+                                                </th>
                                             </tr>
                                             <?php foreach($oderdetail["product"] as $item):?>
                 
@@ -137,9 +141,13 @@ $oderdetail = order_detail($id);
                                                     echo $item2["price"]*$item2["bought_qty"];}?>                                                                                                      
                                                     <?php endforeach;?>
                                                 </td>
+                                                <td class="total">
+                                                <?php echo $oderdetail["order_status"];?>
+                                                </td>
                                             </tr>
                                             <?php endforeach;?> 
                                         </table>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -149,8 +157,77 @@ $oderdetail = order_detail($id);
                                 <p><span>Discount: </span> $0.00</p> -->
                                 <p><span>Total Amount:</span> <?php echo $oderdetail["grand_total"];?> </p>
                             </div>
+                            <div>
+
+                            
+
+                          
+                                   
+                            <div class="wsus__invoice_footer" style="margin-top:60px; padding: 10px;">
+                                
+                                <p><span>Order Processing:</span>  </p>
+                            </div >
+                                    
+                                
+                            <div style="margin:20px;">
+
+                                    <?php if(strcasecmp($oderdetail["order_status"], "To Confirm") == 0):?>
+
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Confirmed">Confirm</a>
+                                </button>
+                                
+
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Canceled">Cancel</a>
+                                </button>
+
+                                
+                                <?php endif;?>
+
+                              
+                                    
+                                   
+                               <?php if(strcasecmp($oderdetail["order_status"], "Confirmed") == 0):?>    
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Shipping">Shipping</a>
+                                </button>
+                               
+                                <?php endif;?>
+
+                                 <?php if(strcasecmp($oderdetail["order_status"], "Shipping") == 0):?>   
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Refund">Refund</a>
+                                </button>
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Completed">Completed</a>
+                                </button>
+                                <?php endif;?>
+                                <?php if(strcasecmp($oderdetail["order_status"], "Completed") == 0):?>   
+                                <h6>Order have already completed and recorded</h6>
+                                <?php endif;?>
+                                <?php if(strcasecmp($oderdetail["order_status"], "Refund") == 0):?>   
+                                <h6>Order have been refunded, to check product, update and save to stock</h6>
+                                <?php endif;?>
+                                <?php if(strcasecmp($oderdetail["order_status"], "Canceled") == 0):?>   
+                                <h6>Order confirmed: cancel, to update product quantity</h6>
+                                <?php endif;?>
+                            </div>
                         </div>
                     </div>
+
+
+                    
+
+
+
+
+
                 </div>
 
 

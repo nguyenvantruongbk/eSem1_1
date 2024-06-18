@@ -19,9 +19,10 @@ $contact_info= [
     
 ];
 
-if(create_contact($contact_info)&&$_SESSION["mes"]<4){
+if($_SESSION["mes"]<4&&$name!=""&&$email!=""&&$tel!=""&&$mes!=""){
+    create_contact($contact_info);
     $_SESSION["mes"] += 1;
     header("Location: /contact.php");
 }else{
-    echo "Fail";
+    echo "Your Form is no acceptable, Please try again";
 }

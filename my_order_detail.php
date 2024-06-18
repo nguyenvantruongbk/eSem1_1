@@ -2,9 +2,10 @@
 require_once("functions/m_product.php");
 // require_once("functions/checkout.php");
 // updateStatusPaid($order_id);
-$orderlist = order_list();
+
 
 $id = $_GET["id"];
+//$orderlist = my_order_list($id);
 $oderdetail = order_detail($id);
 
 
@@ -22,12 +23,46 @@ $oderdetail = order_detail($id);
 <?php include_once("html/header.php");?>
     <?php include_once("html/nav.php");?>
     <div class="container">
-    <img src="images/tk.JPG" class="img-fluid" alt="Thank You" style="width: 100%; height: auto">    
+       <!--============================
+        BREADCRUMB START
+    ==============================-->
+    <section id="wsus__breadcrumb">
+        <div class="wsus_breadcrumb_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>My Order Detail</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Order</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============================
+        BREADCRUMB END
+    ==============================-->
     <div>
+
+<!-- =================== -->
+
+
+
+
+
+
+
+<!-- =================== -->
+
+
+
     <div class="row">
       <div class="col-xl-12 col-xxl-12 col-lg-12  ms-auto">
           <div class="dashboard_content">
-            <h3><i class="fas fa-list-ul"></i>Please find your order detail</h3>
+            <h3><i class="fas fa-list-ul"></i>Your order List</h3>
                     
           </div>
       </div>

@@ -2,8 +2,11 @@
 require_once("functions/m_product.php");
 // require_once("functions/checkout.php");
 // updateStatusPaid($order_id);
-$orderlist = order_list();
-//$oderdetail = order_detail(26);
+
+
+$id = $_GET["id"];
+$orderlist = my_order_list($id);
+//$oderdetail = order_detail($id);
 
 
 ?>
@@ -17,34 +20,39 @@ $orderlist = order_list();
 </head>
 <body>
 
+<?php include_once("html/header.php");?>
+    <?php include_once("html/nav.php");?>
+    <div class="container">
+       <!--============================
+        BREADCRUMB START
+    ==============================-->
+    <section id="wsus__breadcrumb">
+        <div class="wsus_breadcrumb_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Order List</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Order</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============================
+        BREADCRUMB END
+    ==============================-->
+    <div>
+
+<!-- =================== -->
 
 
-  <!--=============================
-    DASHBOARD MENU START
-  ==============================-->
-  <div class="wsus__dashboard_menu">
-    <div class="wsusd__dashboard_user">
-      <!-- <img src="images/dashboard_user.jpg" alt="img" class="img-fluid"> -->
-      <p>User: Admin</p>
-    </div>
-  </div>
-  <!--=============================
-    DASHBOARD MENU END
-  ==============================-->
 
-  <!--=============================
-    DASHBOARD START
-  ==============================-->
-  <section id="wsus__dashboard">
-    <div class="container-fluid">
-
-    <!-- sidbar -->
-    <?php include_once("html/sidebar_admin.php");?> 
- <!-- main -->
-
-
- <div class="row">
-        <div class="col-xl-9 col-xxl-10 col-lg-9  ms-auto">
+<div class="row">
+        <div class="col-xl-12 col-xxl-12 col-lg-12  ms-auto">
           <div class="dashboard_content">
 
             <h3><i class="fas fa-list-ul"></i> order summary</h3>
@@ -60,7 +68,7 @@ $orderlist = order_list();
                       <th class="e_date">Address</th>
                       <th class="price">grand total</th>
                       <th class="method">Payment status</th>
-                      <th class="tr_id">Shipping Method</th>
+                      <th class="method">Shipping Method</th>
                       <th class="status">Payment Method</th>
                       <th class="status">Order Status</th>
                       <th class="status">Detail Order</th>
@@ -74,10 +82,10 @@ $orderlist = order_list();
                       <td class="e_date"><?php echo $item["address"];?></td>
                       <td class="price"><?php echo $item["grand_total"];?></td>
                       <td class="method"><?php echo $item["status"];?></td>
-                      <td class="tr_id"><?php echo $item["shipping_method"];?></td>
+                      <td class="method"><?php echo $item["shipping_method"];?></td>
                       <td class="status"><?php echo $item["payment_method"];?></td>
                       <td class="status"><?php echo $item["order_status"];?></td>
-                      <td class="status"><a href="\order_detail.php?id=<?php echo $item["id"];?>">view</a></td>
+                      <td class="status"><a href="\my_order_detail.php?id=<?php echo $item["id"];?>">view</a></td>
 
 
 
@@ -94,20 +102,8 @@ $orderlist = order_list();
       </div>
 
 
-
-
-
-
-
-
       </div>
 
-
-
-
-
-
-<!-- /////////////////////////////////////////////////////////////////// -->
-   
+    <?php include_once("html/footer.php");?>
     <?php include_once("html/js.php");?> 
 </body>

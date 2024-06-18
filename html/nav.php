@@ -63,7 +63,9 @@
                                     
                                         <li><a href="/Admin_dash_board.php">Admin Dashboard</a></li>
                                         <!-- <li><a href="faqs.html">faq</a></li> -->
-                                        <?php else:?><li><a href="/cart.php">My Card</a></li>
+                                        <?php else:?>
+                                            <li><a href="/cart.php">My Card</a></li>
+                                            <li><a href="/my_order.php?id=<?php echo $_SESSION["auth"]["id"];?>">My Order</a></li>
                                             <?php endif;?> 
                                     </ul>
                                 

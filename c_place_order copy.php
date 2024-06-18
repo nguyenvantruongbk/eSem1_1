@@ -58,13 +58,10 @@ $headers = "From: $from_email";
 if (mail($to_email, $subject, $message, $headers)) {
     echo "Email sent successfully to $to_email";
 } else {
-    //echo "Email sending failed...";
+    echo "Email sending failed...";
 }
 // clear cart
 $_SESSION["cart"] = [];
-if(isset($_SESSION["auth"]) && $_SESSION["auth"] != null){
-    create_user_order($order_id, $_SESSION["auth"]["id"]);
-}
 // paypal
 if($payment_method == "PAYPAL"){
     // Thông tin tài khoản PayPal
@@ -83,7 +80,9 @@ if($payment_method == "PAYPAL"){
     header('Location: ' . $payment['links'][1]['href']);
 }else{
     // redirect to thank you
-   
+    if(isset($_SESSION["auth"]) && $_SESSION["auth"] != null){
+        create_user_order($order_id, $_SESSION["auth"]["id"]);
+    }
     header("Location: /thank_you.php?id=$order_id");
 }
 

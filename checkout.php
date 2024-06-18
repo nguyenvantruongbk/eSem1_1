@@ -22,7 +22,7 @@
                 <div class="col-8">
                     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Customer name</label>
-                    <input required name="customer_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name..">
+                    <input required name="customer_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name.." value="<?php echo $_SESSION["auth"]["full_name"] ?>">
                     </div>
                     <div class="mb-3">
                     <label for="exampleFormControlInput2" class="form-label">Telephone</label>

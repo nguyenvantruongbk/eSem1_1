@@ -67,6 +67,32 @@ function order_list(){
     }
     return $list;
 }
+function my_order_list($userid){
+
+    $sql = "SELECT * from user_oders where user_id ='$userid' ";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    
+    $order_ids = [];
+    
+    foreach($list as $item){
+        $order_ids[] = $item["order_id"];
+    }
+    $order_ids = implode(",",$order_ids);
+
+    $sql = "SELECT * from orders where id in ($order_ids)";
+
+    $result = query($sql);
+        $list = [];
+        while($row = $result->fetch_assoc()){
+            $list[] = $row;
+        }
+
+    return $list;
+}
 //   //2. query SQL
 //      // 2.1. Lấy tham số
 //      $limit = isset($_GET["limit"]) && $_GET["limit"]!= "" ?$_GET["limit"]:20;

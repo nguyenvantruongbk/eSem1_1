@@ -36,3 +36,8 @@ function updateStatusUnPaid($order_id){
     $sql = "update orders SET status = 'PAYMENT_FAIL' where id = $order_id";
     query($sql);
 }
+function create_user_order($order_id,$user_id)
+{
+    $sql = "INSERT into user_oders(order_id,user_id)  values('$order_id','$user_id')";
+    query($sql);
+}

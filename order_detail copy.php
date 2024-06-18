@@ -19,23 +19,41 @@ $oderdetail = order_detail($id);
 </head>
 <body>
 
-<?php include_once("html/header.php");?>
-    <?php include_once("html/nav.php");?>
-    <div class="container">
-    <img src="images/tk.JPG" class="img-fluid" alt="Thank You" style="width: 100%; height: auto">    
-    <div>
+
+
+  <!--=============================
+    DASHBOARD MENU START
+  ==============================-->
+  <div class="wsus__dashboard_menu">
+    <div class="wsusd__dashboard_user">
+      <!-- <img src="images/dashboard_user.jpg" alt="img" class="img-fluid"> -->
+      <p>Admin</p>
+    </div>
+  </div>
+  <!--=============================
+    DASHBOARD MENU END
+  ==============================-->
+
+  <!--=============================
+    DASHBOARD START
+  ==============================-->
+<section id="wsus__dashboard">
+  <div class="container-fluid">
+
+    <!-- sidbar -->
+    <?php include_once("html/sidebar_admin.php");?>
+    <!-- main --> 
     <div class="row">
-      <div class="col-xl-12 col-xxl-12 col-lg-12  ms-auto">
+      <div class="col-xl-9 col-xxl-10 col-lg-9  ms-auto">
           <div class="dashboard_content">
-            <h3><i class="fas fa-list-ul"></i>Please find your order detail</h3>
+            <h3><i class="fas fa-list-ul"></i> order detail</h3>
                     
           </div>
       </div>
   </div>
-
     <!-- main --> 
     <div class="row">
-                <div class="col-xl-12 col-xxl-12 col-lg-12 ms-auto">
+                <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
                     <div class="dashboard_content">
                         <div class="wsus__invoice_area">
                             <div class="wsus__invoice_header">
@@ -146,44 +164,71 @@ $oderdetail = order_detail($id);
                                    
                             <div class="wsus__invoice_footer" style="margin-top:60px; padding: 10px;">
                                 
-                                <p><span>Your Order Status:</span> </p>
+                                <p><span>Order Processing:</span>  </p>
                             </div >
-                            <div style="margin:20px;">
-                            <?php if(strcasecmp($oderdetail["order_status"], "To Confirm") == 0):?>
-
-                                <h6>Your order is under processing</h6>
-                            <?php else:?>
-                                <?php echo $oderdetail["order_status"]; ?>
-
-
-                            <?php endif;?>
-                            
-                            </div>
+                                    
                                 
-                            
+                            <div style="margin:20px;">
+
+                                    <?php if(strcasecmp($oderdetail["order_status"], "To Confirm") == 0):?>
+
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Confirmed">Confirm</a>
+                                </button>
+                                
+
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Canceled">Cancel</a>
+                                </button>
+
+                                
+                                <?php endif;?>
+
+                              
+                                    
+                                   
+                               <?php if(strcasecmp($oderdetail["order_status"], "Confirmed") == 0):?>    
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Shipping">Shipping</a>
+                                </button>
+                               
+                                <?php endif;?>
+
+                                 <?php if(strcasecmp($oderdetail["order_status"], "Shipping") == 0):?>   
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Refund">Refund</a>
+                                </button>
+                                <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                        <a style="color: white;" href="/c_order_process.php?id=<?php echo $oderdetail["id"];?>&orderprocess=Completed">Completed</a>
+                                </button>
+                                <?php endif;?>
+                                <?php if(strcasecmp($oderdetail["order_status"], "Completed") == 0):?>   
+                                <h6>Order have already completed and recorded</h6>
+                                <?php endif;?>
+                                <?php if(strcasecmp($oderdetail["order_status"], "Refund") == 0):?>   
+                                <h6>Order have been refunded, to check product, update and save to stock</h6>
+                                <?php endif;?>
+                                <?php if(strcasecmp($oderdetail["order_status"], "Canceled") == 0):?>   
+                                <h6>Order confirmed: cancel, to update product quantity</h6>
+                                <?php endif;?>
                             </div>
                         </div>
                     </div>
-
-
-                    
-
-
-
-
-
                 </div>
 
 
     <!-- main --> 
-    </div>
-    </div>
 
-
-
-
-
-
-    <?php include_once("html/footer.php");?>
-    <?php include_once("html/js.php");?> 
+  <!-- detailorder -->                                 
+  <!-- enddetailorder -->
+   <!-- endmain --> 
+  </div>
+</section>
+<!-- /////////////////////////////////////////////////////////////////// -->
+   <?php include_once("html/js.php");?> 
 </body>
