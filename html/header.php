@@ -25,7 +25,7 @@
                 <div class="col-xl-5 col-md-6 col-lg-4 d-none d-lg-block">
                     <div class="wsus__search">
                         <form action="/search.php" method="GET">
-                            <input type="text" name="search" placeholder="Search..." value="<?php echo $search; ?>">
+                            <input type="text" name="search" placeholder="Search..." value="" required/>
                             <button type="submit"><i class="far fa-search"></i></button>
                         </form>
                     </div>

@@ -1,9 +1,13 @@
 
 <?php
    require_once("functions/m_product.php");
-   //require("functions/product.php");
-    $news = recent_blogs();
-    $blogcategories = blog_categories_all();
+   
+   $search = $_GET["search"];
+   
+   $searchitem = search_blogs($search);
+   echo $search;
+   $blogcategories = blog_categories_all();
+   
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +62,7 @@
             <div class="col-xxl-9 col-xl-8 col-lg-8">                                                                                                                              
                 <div class="row">
                     <div class="col-xl-12">
-                        <h5>Recent posts</h5>
+                        <h5>Search result:</h5>
                     </div>
                 </div>
                 <!-- <div>blogsession</div> -->
@@ -67,7 +71,7 @@
                     <!-- <div>laydata tu phpdatabase</div> -->
                 <div class="row">
                 
-                    <?php foreach($news as $item):?>
+                    <?php foreach($searchitem as $item):?>
                     <div class="col-xl-4">
                         <div class="wsus__single_blog wsus__single_blog_2">
                             <a class="wsus__blog_img" href="/blog_detail.php?id=<?php echo $item["id"];?>">

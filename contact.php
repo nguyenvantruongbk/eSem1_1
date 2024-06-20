@@ -52,27 +52,27 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="wsus__con_form_single">
-                                            <input type="text" placeholder="Your Name" name="name" value="">
+                                            <input type="text" placeholder="Your Name" name="name" value="" required/>
                                         </div>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="wsus__con_form_single">
-                                            <input type="email" placeholder="Email" name="email" value="">
+                                            <input type="email" placeholder="Email" name="email" value="" required/>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="wsus__con_form_single">
-                                            <input type="text" placeholder="Phone" name="tel" value="">
+                                            <input type="text" placeholder="Phone" name="tel" value="" required/>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="wsus__con_form_single">
-                                            <input type="text" placeholder="Subject" name="subject" value="">
+                                            <input type="text" placeholder="Subject" name="subject" value="" required/>
                                         </div>
                                     </div>
                                     <div class="col-xl-12">
                                         <div class="wsus__con_form_single">
-                                            <textarea cols="3" rows="5" placeholder="message" name="mes" value=""></textarea>
+                                            <textarea cols="3" rows="5" placeholder="message" name="mes" value="" required></textarea>
                                         </div>
                                         <button type="submit" class="common_btn">send now</button>
                                     </div>

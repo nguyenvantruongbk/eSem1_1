@@ -84,7 +84,7 @@ $orderlist = my_order_list($id);
                       <td class="method"><?php echo $item["status"];?></td>
                       <td class="method"><?php echo $item["shipping_method"];?></td>
                       <td class="status"><?php echo $item["payment_method"];?></td>
-                      <td class="status"><?php echo $item["order_status"];?></td>
+                      <td class="status"><?php if(strcasecmp($item["order_status"], "To Confirm") == 0) echo "Wait to confirm"; else echo $item["order_status"];?></td>
                       <td class="status"><a href="\my_order_detail.php?id=<?php echo $item["id"];?>">view</a></td>
 
 

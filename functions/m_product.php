@@ -47,6 +47,18 @@ function recent_blogs(){
     }
     return $list;
 }
+
+
+function search_blogs($search){
+    $sql = "SELECT * from blogs WHERE title LIKE '%$search%'";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}
+
 function search_items($search){
     
     $sql = "SELECT * FROM products WHERE name LIKE '%$search%'";
@@ -67,6 +79,8 @@ function order_list(){
     }
     return $list;
 }
+
+
 function my_order_list($userid){
 
     $sql = "SELECT * from user_oders where user_id ='$userid' ";
@@ -93,17 +107,7 @@ function my_order_list($userid){
 
     return $list;
 }
-//   //2. query SQL
-//      // 2.1. Lấy tham số
-//      $limit = isset($_GET["limit"]) && $_GET["limit"]!= "" ?$_GET["limit"]:20;
-//      $search = isset($_GET["search"])?$_GET["search"]:"";
-//      //2.2. áp dụng giá trị tham số vào truy vấn
-//     $sql = "SELECT * FROM products WHERE name LIKE '%$search%' LIMIT $limit";
-//     $result = $conn->query($sql);
-//     $list = [];
-//     while($row = $result->fetch_assoc()){
-//       $list[] = $row;
-//     }
+
 
 function categories_all(){
     $sql = "select * from categories";
@@ -134,6 +138,7 @@ function category_detail($category_id){
     return null;
     
 }
+
 
 function product_detail($product_id)  {
     $sql = "select * from products where id = $product_id";

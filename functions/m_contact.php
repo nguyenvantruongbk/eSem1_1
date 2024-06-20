@@ -15,3 +15,13 @@ function create_contact($contact_info){
     query($sql);
     return true;    } else return false;
 }
+
+function recent_message(){
+    $sql = "SELECT * from contacts order by name desc";
+    $result = query($sql);
+    $list = [];
+    while($row = $result->fetch_assoc()){
+        $list[] = $row;
+    }
+    return $list;
+}

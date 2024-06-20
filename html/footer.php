@@ -58,8 +58,8 @@
                         <h3>Subscribe To Our Newsletter</h3>
                         <p>Get all the latest information on Events, Sales and Offers.
                             Get all the latest information on Events.</p>
-                        <form>
-                            <input type="text" placeholder="Email address">
+                        <form method="POST" action="/c_subscribe.php">
+                            <input type="email" placeholder="Email address" name ="email" required/>
                             <button type="submit" class="common_btn">Subscribe</button>
                         </form>
                         <div class="footer_payment">

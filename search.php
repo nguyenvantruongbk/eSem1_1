@@ -1,8 +1,12 @@
 <?php
+   
     require_once("functions/m_product.php");
     $search = $_GET["search"];
-    $search = search_items($search);
+    $searchItems = search_items($search);
+  
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +20,10 @@
     <?php include_once("html/nav.php");?>
     <main class="main">
         <div class="container">
-            <h2><?php echo $_GET["search"];?></h2>
+            <h2><?php echo $search;?></h2>
             <div class="row">
            
-                <?php foreach($search as $item):?>
+                <?php foreach($searchItems as $item):?>
                     <div class="col-xl-3 col-sm-6 col-lg-4">
                     
                     <div class="wsus__product_item">

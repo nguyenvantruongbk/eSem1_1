@@ -70,14 +70,14 @@
                                         <!-- Email Address -->
                                         <div class="wsus__login_input">
                                             <i class="fas fa-user-tie"></i>
-                                            <input id="email" type="email" name="email" value="" placeholder="Email">
+                                            <input id="email" type="email" name="email" value="" placeholder="Email" required/>
                                         </div>
 
                                         <!-- Password -->
 
                                         <div class="wsus__login_input">
                                             <i class="fas fa-key"></i>
-                                            <input id="password" name="password" type="password" placeholder="Password">
+                                            <input type="password" id="password" name="password" type="password" placeholder="Password" required/>
                                         </div>
 
                                         <!-- Remember Me -->
@@ -104,19 +104,19 @@
                                         <!-- Name -->
                                         <div class="wsus__login_input">
                                             <i class="fas fa-user-tie"></i>
-                                            <input id="name" type="text" placeholder="Name" name="full_name" value="">
+                                            <input id="name" type="text" placeholder="Name" name="full_name"  required/>
                                         </div>
 
                                         <!-- Email Address -->
                                         <div class="wsus__login_input">
                                             <i class="far fa-envelope"></i>
-                                            <input type="text" placeholder="Email" name="email" id="email" value="">
+                                            <input type="email" placeholder="Email" name="email" id="email"  required/>
                                         </div>
 
                                         <!-- Password -->
                                         <div class="wsus__login_input">
                                             <i class="fas fa-key"></i>
-                                            <input type="password" id="password" name="password" placeholder="Password">
+                                            <input type="password" id="password" name="password" placeholder="Password" required/>
                                         </div>
 
                                         <!-- Confirm Password -->

@@ -22,15 +22,15 @@
                 <div class="col-8">
                     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Customer name</label>
-                    <input required name="customer_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name.." value="<?php echo $_SESSION["auth"]["full_name"] ?>">
+                    <input required name="customer_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name.." value="<?php echo $_SESSION["auth"]["full_name"] ?>" required/>
                     </div>
                     <div class="mb-3">
                     <label for="exampleFormControlInput2" class="form-label">Telephone</label>
-                    <input required name="tel" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Telephone..">
+                    <input  name="tel" type="tel" class="form-control" id="exampleFormControlInput2" placeholder="Telephone.." pattern="[0-9]{10,15}" title="Phone number must be numeric and between 10 to 15 digits" required/>
                     </div>
                     <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                    <textarea required name="address" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea required name="address" type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>
                     <h6>Shipping method</h6>
                     <div class="form-check">

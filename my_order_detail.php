@@ -158,7 +158,7 @@ $oderdetail = order_detail($id);
                                                     <?php endforeach;?>
                                                 </td>
                                                 <td class="total">
-                                                <?php echo $oderdetail["order_status"];?>
+                                                <?php if(strcasecmp($oderdetail["order_status"], "To Confirm") == 0) echo "Wait to confirm";?>
                                                 </td>
                                             </tr>
                                             <?php endforeach;?> 
